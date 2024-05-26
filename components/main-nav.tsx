@@ -1,16 +1,12 @@
 "use client";
 
-import Image from "next/image";
-
 import { cn } from "@/lib/utils";
 import CustomLink from "./custom-link";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 import React from "react";
@@ -24,14 +20,24 @@ export function MainNav() {
           <h1 className="text-5xl uppercase">Hoarder</h1>
         </Button>
       </CustomLink>
-      <NavigationMenu>
+      <NavigationMenu className="gap-3">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuLink
-              href="/client-example"
+              href="/hoard"
               className={navigationMenuTriggerStyle()}
             >
-              Client Side
+              App
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              href="/FAQ"
+              className={navigationMenuTriggerStyle()}
+            >
+              FAQ
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
