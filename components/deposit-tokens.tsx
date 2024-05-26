@@ -17,7 +17,7 @@ const DepositTokens = () => {
   };
 
   return (
-    <div>
+    <div className="border p-6 border-black space-y-2">
       <h1>Contract balance: {contractBalance?.formatted || "Loading.."} ETH</h1>
       <button
         onClick={handleDeposit}

@@ -10,7 +10,7 @@ const SellCurrency = () => {
 
   const { address: connectedWalletAddress } = useAccount();
 
-  const { data: hoardBalance, error: errorHoard } = useReadContract({
+  const { data: hoardBalance } = useReadContract({
     address: HOARD_TKN_ADDRESS,
     abi: tokenAbi,
     functionName: "balanceOf",
@@ -27,7 +27,7 @@ const SellCurrency = () => {
   };
 
   return (
-    <div className="">
+    <div className="border p-6 border-black space-y-2">
       <h1>HOARD balance: {(hoardBalance as BigInt | undefined)?.toString()}</h1>
       <h1>
         Amount to sell:{" "}
